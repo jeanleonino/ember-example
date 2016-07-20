@@ -1,0 +1,6 @@
+<p>Enter the hotel and room ids:</p>
+
+{{one-way-input hotelId update=(pipe-action (action (mut hotelId)) (action 'fetchHotel' hotelId roomId)) }}
+{{one-way-input roomId update=(pipe-action (action (mut roomId)) (action 'fetchHotel' hotelId roomId)) }}
+
+{{hotel-room hotel=hotel}}
